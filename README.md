@@ -44,7 +44,7 @@ header button{background:#00e676;border:none;padding:10px 16px;border-radius:20p
   <h1>Step Into <span>Crazy Comfort</span></h1>
   <p>All types of footwear - Sneakers, Runners, Boots, Sandals & More. Delivered in SA.</p>
   <a href="#shop">SHOP NOW ↓</a>
-  <p style="margin-top:12px;font-size:13px">📍 Krugersdorp | 🚚 Nationwide Delivery | 💬 WhatsApp Orders</p>
+  <p style="margin-top:12px;font-size:13px">📍 Krugersdorp |🚚 DM for Delivery | 💬 WhatsApp Orders</p>
 </div>
 
 <div class="filters" id="shop">
