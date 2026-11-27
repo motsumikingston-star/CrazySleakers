@@ -172,39 +172,8 @@ function checkoutWhatsApp(){
     `Name: ${name}`,
     `Delivery address: ${address}`
   ].join('\n');
-  <!-- PayPal Checkout - CrazySleakers -->
-<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-  <input type="hidden" name="cmd" value="_xclick">
-  <input type="hidden" name="business" value="Btrigger152@gmail.com">
-  <input type="hidden" name="item_name" value="CrazySleakers Order">
-  <input type="hidden" name="currency_code" value="ZAR">
-  <input type="hidden" name="amount" id="paypalAmount" value="0">
-  <input type="hidden" name="custom" id="paypalCustom" value="">
-
-  <button type="submit" onclick="setPayPalAmount()" style="width:100%; background:#FFC439; color:#003087; padding:16px; border:none; border-radius:10px; font-weight:bold; font-size:18px; cursor:pointer;">
-    ORDER NOW - Pay with PayPal
-  </button>
-</form>
-
-<script>
-function setPayPalAmount() {
-  // This gets the total from your cart
-  let totalText = document.body.innerText.match(/Total:\s*R?\s*([\d,.]+)/);
-  // If your site uses a different total id, change this
-  let totalEl = document.getElementById('total') || document.getElementById('cartTotal');
-  let amount = 0;
-  if (totalEl) { amount = totalEl.innerText.replace(/[^0-9.]/g, ''); }
-  else if (totalText) { amount = totalText[1].replace(',', ''); }
-
-  document.getElementById('paypalAmount').value = amount || 0;
-
-  let name = document.getElementById('name')?.value || '';
-  let address = document.getElementById('address')?.value || '';
-  document.getElementById('paypalCustom').value = 'Name: ' + name + ' | Address: ' + address;
-}
-</script>
-render();
-updateCart();
-</script>
+  let paypalAmount = (total / 100).toFixed(2);
+let paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=Btrigger152@gmail.com&item_name=${encodeURIComponent('CrazySleakers Order')}&amount=${paypalAmount}&currency_code=ZAR&custom=${encodeURIComponent(message)}`;
+window.open(paypalUrl, '_blank', 'noopener,noreferrer');
 </body>
 </html>
