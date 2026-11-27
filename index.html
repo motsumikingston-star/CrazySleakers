@@ -172,8 +172,9 @@ function checkoutWhatsApp(){
     `Name: ${name}`,
     `Delivery address: ${address}`
   ].join('\n');
-  let paypalAmount = (total / 100).toFixed(2);
-let paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=Btrigger152@gmail.com&item_name=${encodeURIComponent('CrazySleakers Order')}&amount=${paypalAmount}&currency_code=ZAR&custom=${encodeURIComponent(message)}`;
+let paypalAmount = (total / 100).toFixed(2);
+let paypalUrl = `https://www.paypal.com/...`;
 window.open(paypalUrl, '_blank', 'noopener,noreferrer');
+}
 </body>
 </html>
